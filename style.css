@@ -1,30 +1,43 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-html,
+* {
+    margin: 0;
+}
+
 body {
-  margin: 0;
-  padding: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
 }
 
 /* Add styles here! */
 
-* {
-  margin: 0;
-  padding: 0;
+p {
+    font-size: 1.25rem;
+    padding-bottom: 0.9rem;
 }
 
-p:not(:first-of-type) {
-    padding-top: 0.9rem;
+p:last-child {
+    padding-bottom: 0;
 }
 
 .max-width-wrapper {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px dashed blue;
 }
 
 .intro-chunk {
@@ -32,10 +45,9 @@ p:not(:first-of-type) {
     padding-bottom: 64px;
     padding-left: 24px;
     padding-right: 24px;
-    border: 1px dashed red;
 }
 
-.intro-chunk h1 {
+h1 {
     font-size: 2rem;
     font-weight: 900;
 }
@@ -46,8 +58,6 @@ p:not(:first-of-type) {
 
 .intro-chunk p {
     max-width: 415px;
-    font-size: 1.25rem;
-    line-height: 1.5;
 }
 
 .intro-chunk strong {
@@ -55,23 +65,27 @@ p:not(:first-of-type) {
 }
 
 main {
-    border-top: 8px solid #999999;
     background-color: #666;
     padding-top: 64px;
-    padding-bottom: 58px;
+    padding-bottom: 64px;
+    border-top: 8px solid #999999;
 }
 
 .card {
     background-color: white;
-    padding-top: 8px;
+    padding-top: 12px;
+    padding-bottom: 32px;
     padding-left: 24px;
     padding-right: 24px;
-    border: 1px dashed red;
+    border-bottom: 8px solid hsl(0deg, 0%, 60%);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
 }
 
 .card .indented-heading {
-    font-size: 1.5rem;
-    font-weight: 900;
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 16px;
@@ -82,7 +96,6 @@ main {
     width: fit-content;
 }
 
-
-
-
-
+.card p:first-of-type {
+    padding-top: 1rem;
+}
